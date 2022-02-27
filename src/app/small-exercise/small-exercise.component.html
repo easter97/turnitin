@@ -1,6 +1,20 @@
-<input #timing>
-<button (click)="runDelay(timing.value)">Delay function</button>
+<div class="example">
+    <p>Enter the delay time in milliseconds</p>
+    <p>Ex: 5000</p>
+    <input #timing>
+    <button (click)="runDelay(timing.value)">Delay function</button>
+</div>
+<div class="example">
+    <div class=animate #el>Animation example</div>
+    <button (click)="animateRight(el)">Animate</button>
+    <button (click)="resetAnimation(el)">Reset Animation</button>
+</div>
+<div class="example">
+    <p>You can modify this sample array programatically by updating the value of xs</p>
+    <div>Input: [{{this.xs}}]</div>
+    <button (click)="removeDuplicates(this.xs)">Remove Duplicates</button>   
+   
+    <div>Result: [{{this.parsedArray}}]</div>
+</div>
 
-<div class=animate #el>Animation example</div>
-<button (click)="animateRight(el)">Animate</button>
-<button (click)="resetAnimation(el)">Reset Animation</button>
+
