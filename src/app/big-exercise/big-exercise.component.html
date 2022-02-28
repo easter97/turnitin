@@ -1,1 +1,15 @@
-<p>big-exercise works!</p>
+<div class=grid>
+    <div class="main">
+        <h1>Who's a Good Dog?</h1>
+        <p class="tip">Tip: Use your mouse to pet.</p>
+      <img class="main-image" [src]="this.goodBoy.image" /> 
+      <p>This <span class=breed>{{this.goodBoy.breed}}</span> is a very good dog.</p> 
+      <button (click)="updateGoodBoy()">See Another Good Dog</button>
+    </div>
+    <div class="links">
+        <h2>Links to other good dogs:</h2>
+        <ul class=dog-list>
+            <li *ngFor="let dog of doggieDayCare"><a class="dog-link" target="blank" [href]="dog.image">{{dog.breed}}</a></li>
+        </ul>
+    </div>
+</div>

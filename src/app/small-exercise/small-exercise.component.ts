@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./small-exercise.component.scss']
 })
 export class SmallExerciseComponent implements OnInit {
-
+  wait:boolean=false;
   animationVal:number=0;
   arrayInput:Array<any>=[];
   parsedArray:Array<any>=[];
-  xs:Array<any>=['A', 'B', 'A', 'C', 'B'];
 
   constructor() { }
 
@@ -20,11 +19,15 @@ export class SmallExerciseComponent implements OnInit {
 // ms: number of milliseconds
 // returns a Promise that is resolved after ms milliseconds
 delay(ms) {
+  this.wait=true;
   return new Promise(resolve => setTimeout(resolve, ms));
 } 
 //Attaches function to user input
 runDelay(ms){
-  this.delay(ms).then(() => console.log('Promise resolved'));
+  this.delay(ms).then(() => {
+    alert('Your promise has resolved')
+    this.wait=false;
+  });
 }
 
 // el: element node object
@@ -42,15 +45,20 @@ resetAnimation(el){
 
 // xs: array
 // returns: a new array, with unique items
-removeDuplicates(xs:Array<any>) {
-  //make sure our input is an array
-  this.arrayInput=xs
-  //remove duplicates
-  this.parsedArray=this.arrayInput;
-  this.parsedArray=[...new Set(this.arrayInput)];
+removeDuplicates(xs) {
+  this.parsedArray=[...new Set(xs)];
   //return parsed array
   return this.parsedArray
 } 
+//adding this duplicate helper so that we can make sure the front-end input works with our function
+duplicateHelper(input){
+  let xs=input.split(',')
+  //store input to display before/after
+  this.arrayInput=xs
+  //set a new array for removed duplicates to show after
+  this.parsedArray=this.arrayInput;
+  this.removeDuplicates(xs);
+}
 
 
 

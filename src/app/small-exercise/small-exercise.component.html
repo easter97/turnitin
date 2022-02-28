@@ -1,8 +1,10 @@
+<h1>Small Exercise</h1>
 <div class="example">
     <p>Enter the delay time in milliseconds</p>
     <p>Ex: 5000</p>
-    <input #timing>
-    <button (click)="runDelay(timing.value)">Delay function</button>
+    <input [disabled]="wait" #timing>
+    <button *ngIf="!wait" (click)="runDelay(timing.value)">Delay function</button>
+    <div *ngIf="wait">Waiting for promise to return</div>
 </div>
 <div class="example">
     <div class=animate #el>Animation example</div>
@@ -10,11 +12,11 @@
     <button (click)="resetAnimation(el)">Reset Animation</button>
 </div>
 <div class="example">
-    <p>You can modify this sample array programatically by updating the value of xs</p>
-    <div>Input: [{{this.xs}}]</div>
-    <button (click)="removeDuplicates(this.xs)">Remove Duplicates</button>   
-   
-    <div>Result: [{{this.parsedArray}}]</div>
+    <textarea #xs></textarea>
+    <p>Build your array with comma separated values</p>
+    <button (click)="duplicateHelper(xs.value)">Remove Duplicates</button>   
+    <div *ngIf="this.arrayInput.length>0">Input: [{{this.arrayInput}}]</div>
+    <div *ngIf="this.parsedArray.length>0">Result: [{{this.parsedArray}}]</div>
 </div>
 
 
