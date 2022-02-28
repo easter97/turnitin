@@ -1,5 +1,6 @@
 <h1>Small Exercise</h1>
 <div class="example">
+    <h3>Delay Function Example</h3>
     <p>Enter the delay time in milliseconds</p>
     <p>Ex: 5000</p>
     <input [disabled]="wait" #timing>
@@ -7,11 +8,13 @@
     <div *ngIf="wait">Waiting for promise to return</div>
 </div>
 <div class="example">
-    <div class=animate #el>Animation example</div>
+    <h3>Animation Example</h3>
+    <div class=animate #el>Animate Me!</div>
     <button (click)="animateRight(el)">Animate</button>
     <button (click)="resetAnimation(el)">Reset Animation</button>
 </div>
 <div class="example">
+    <h3>Duplicates in Array Example</h3>
     <textarea #xs></textarea>
     <p>Build your array with comma separated values</p>
     <button (click)="duplicateHelper(xs.value)">Remove Duplicates</button>   
