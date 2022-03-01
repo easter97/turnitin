@@ -9,9 +9,7 @@ Make sure you have the following requirements to build this project:
 * Angular CLI
 * npm package manager
 
-Don't have this? That's ok. It's also hosted on my personal site:
-* [Small exercise](http://amandaeaster.com/turnitin/small-exercise)
-* [Big exercise](http://amandaeaster.com/turnitin/big-exercise)
+Don't have this? That's ok. It's also hosted on my personal site [here](http://amandaeaster.com/turnitin/)
 
 ## Development server
 
