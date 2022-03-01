@@ -10,8 +10,8 @@ Make sure you have the following requirements to build this project:
 * npm package manager
 
 Don't have this? That's ok. It's also hosted on my personal site:
-[Small Exercise] (http://amandaeaster.com/turnitin/small-exercise)
-[Big Exercise] (http://amandaeaster.com/turnitin/big-exercise)
+[Small exercise](http://amandaeaster.com/turnitin/small-exercise)
+[Big exercise](http://amandaeaster.com/turnitin/big-exercise)
 
 ## Development server
 
