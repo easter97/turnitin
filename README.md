@@ -9,6 +9,10 @@ Make sure you have the following requirements to build this project:
 * Angular CLI
 * npm package manager
 
+Don't have this? That's ok. It's also hosted on my personal site:
+[Small Exercise] (http://amandaeaster.com/turnitin/small-exercise)
+[Big Exercise] (http://amandaeaster.com/turnitin/big-exercise)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
